@@ -1,0 +1,123 @@
+syntax on 
+set number relativenumber 
+set ruler 
+set wrap 
+set shiftwidth=4
+set tabstop=4 
+set softtabstop=4
+set expandtab 
+set smartindent 
+set backspace=2
+set co=5
+set nobackup 
+set noswapfile 
+set keep-english-in-normal
+set showmatch 
+set clipboard^=unnamed, unnamedplus 
+set cursorline 
+set fdm=marker
+
+let mapleader=" "
+
+inoremap jk <Esc>
+nnoremap L $
+nnoremap H ^ 
+# terminal operation 
+nnoremap <C-t> :action ActivateTerminalToolWindow<CR>
+nnoremap <leader>t :action Terminal.OpenInterminal<CR>
+
+# window navigation 
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k 
+
+nnoremap <TAB> :action PreviousTab<CR>
+nnoremap <S-TAB> :action NextTab<CR>
+nnoremap <Leader>en :action EditSourceInNewWindow<CR>
+nnoremap <Leader>mw :action MoveEditorToOppositeTabGroup<CR>
+nnoremap <Leader>n :action NextWindow<CR>
+nnoremap <Leader>q :action CloseContent<CR>
+nnoremap <Leader>qa :action CloseAllEditors<CR>
+
+# code manipulation  
+set ideajoin 
+set idearefactormode=keep 
+
+nnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
+
+nnoremap zc :action CollapseRegion<CR>
+nnoremap zo :action ExpandRegion<CR>
+nnoremap <Leader>zc :action CollapseAllRegions<CR>
+nnoremap <Leader>zo :action ExpandAllRegions<CR>
+
+nnoremap zu :action MoveLineUp<CR>
+nnoremap zd :action MoveLineDown<CR>
+nnoremap <Leader>zu :action MoveStatementUp<CR>
+nnoremap <Leader>zd :action MoveStatementDown<CR>
+
+nnoremap <Leader>= :action ReformatCode<CR>
+nnoremap <Leader>o :action optimizeImports<CR>
+nnoremap <Leader>r :action Refactorings.QuickListPopupAction<CR>
+
+# code edit 
+nnoremap <Leader>d :action EditorDuplicate<CR>
+nnoremap <Leader>iv :action IntroduceVariable<CR>
+nnoremap <Leader>em :action EtractMethod<CR>
+nnoremap <Leader>re :action RenameElement<CR>
+nnoremap <Leader>cs :action EditorCompleteStatement<CR>
+nnoremap <Leader>sw :action SurroundWith<CR>
+nnoremap cc :action CommentByLineComment<CR>
+vnoremap cc :action CommentByBlockComment<CR>
+nnoremap cb :action CommentByBlockComment<CR>
+
+# move with selection
+nnoremap <A>n :action EditorDownWithSelection<CR>
+
+# code info /goto declaration/usage/definition/implementation 
+set incsearch 
+
+nnoremap <Leader>sp :action ParameterInfo<CR>
+nnoremap <Leader>sa :action ShowIntentionActions<CR>
+
+nnoremap ga :action GotoAction<CR>
+nnoremap gF :action GotoFile<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gs :action GotoSuperMethod<CR>
+nnoremap gS :action GotoSymbol<CR>
+nnoremap ge :action GotoNextError<CR>
+nnoremap gE :action GotoPreviousError<CR>
+nnoremap gr :action GotoRelated<CR>
+nnoremap gb :action Back<CR>
+nnoremap gf :action Forward<CR>
+nnoremap gc :action GenerateGetterAndSetter<CR>
+nnoremap gC :action GotoClass<CR>
+nnoremap gt :action GotoTest<CR>
+
+
+# search/find/replace 
+nnoremap <Leader>fip :action FindInPath<CR>
+nnoremap <Leader>fu :action FindUsages<CR>
+nnoremap <Leader>ff :action FindUsagesInFile<CR>
+nnoremap <Leader>rip :action ReplaceInPath<CR>
+
+# run and debug 
+nnoremap ,r :action ContextRun<CR>
+nnoremap ,c :action RunClass<CR>
+nnoremap ,f :action ChooseRunConfiguration<CR>
+nnoremap ,t :action ActivateRunToolWindown<CR>
+nnoremap ,u :action Rerun<CR>
+
+nnoremap ,f :action RerunFailedTests<CR>
+
+nnoremap ,b :action ToggleLineBreakpoint<CR>
+nnoremap ,d :action ContextDebug<CR>
+nnoremap ,n :action ActivateDebugToolWindow<CR>
+
+# structure info 
+set NERDTree 
+nnoremap <C-s> :action FileStructurePopup<CR>
+
+
