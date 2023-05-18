@@ -1,0 +1,92 @@
+{
+    "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
+    "python.defaultInterpreterPath": "~/Downloads/python_venvs/pachong/bin/python",
+    "files.autoSave": "afterDelay",
+    "vim.leader": "<space>",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j","k"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["J"],
+            "after": ["5", "j"]
+        },
+        {
+            "before": ["K"],
+            "after": ["5", "K"]
+        },
+        {
+            "before": ["<leader>", "j"],
+            "after": ["J"]
+        },
+        {
+            "before": ["<C-h>"],
+            "after": ["C-w", "h"]
+        },
+        {
+            "before": ["<C-j>"],
+            "after": ["C-w", "j"]
+        },
+        {
+            "before": ["<C-k>"],
+            "after": ["C-w", "k"]
+        },
+        {
+            "before": ["<C-l>"],
+            "after": ["C-w", "l"]
+        },
+        {
+            "before": ["t", "t"],
+            "commands": [":tabnew"]
+        },
+        {
+            "before": ["t", "n"],
+            "commands": [":tabnext"]
+        },
+        {
+            "before": ["t", "p"],
+            "commands": [":tabprev"]
+        },
+        {
+            "before": ["t", "o"],
+            "commands": [":tabo"]
+        },
+        {
+            "before": ["<space>", "/"],
+            "after": [":noh"]
+        },
+        {
+            "before": ["s", "c"],
+            "commands": ["workbench.action.showCommands"]
+        },
+        {
+            "before": ["<space>", "s", "a"],
+            "commands": ["editor.action.triggerSuggest"]
+        },
+        {
+            "before": ["s", "h"],
+            "commands": ["editor.action.showHover"]
+        },
+        {
+            "before": ["g", "s"],
+            "commands": ["workbench.action.gotoSymbol"]
+        },
+        {
+            "before": ["g", "f"],
+            "commands": ["workbench.action.files.openFile"]
+        },
+        {
+            "before": ["g", "d"],
+            "commands": ["editor.action.revealDefinition"]
+        }
+    ],
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "window.zoomLevel": -1
+}
